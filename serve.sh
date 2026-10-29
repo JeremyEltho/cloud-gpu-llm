@@ -25,4 +25,4 @@ if [ ! -f "$MODELS_DIR/$FILE" ]; then
 fi
 
 exec "$LLAMA_DIR/build/bin/llama-server" -m "$MODELS_DIR/$FILE" -c "$CTX" -ngl 999 \
-  --host 0.0.0.0 --port 8080 --api-key "$API_KEY" --jinja -np 1 --cache-reuse 256
+  --host 0.0.0.0 --port 8080 --api-key "$API_KEY" --jinja -np 2 --cache-reuse 256
