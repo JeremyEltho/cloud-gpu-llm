@@ -9,4 +9,5 @@ export ANTHROPIC_API_KEY=""
 export ANTHROPIC_MODEL="local"
 export ANTHROPIC_SMALL_FAST_MODEL="local"
 export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
-exec claude --permission-mode default --disallowedTools Agent "$@"
+export MAX_THINKING_TOKENS=0
+exec claude --strict-mcp-config --permission-mode default --disallowedTools Agent "$@"
