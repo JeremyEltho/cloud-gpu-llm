@@ -3,8 +3,8 @@
 # downloads the model, and serves an OpenAI-compatible API on :8080.
 set -euo pipefail
 
-REPO="bartowski/Llama-3.3-70B-Instruct-abliterated-GGUF"
-FILE="${QUANT_FILE:-Llama-3.3-70B-Instruct-abliterated-Q4_K_M.gguf}"  # ~42GB
+REPO="${MODEL_REPO:-bartowski/Llama-3.3-70B-Instruct-abliterated-GGUF}"
+FILE="${QUANT_FILE:-Llama-3.3-70B-Instruct-abliterated-Q4_K_M.gguf}"  # single-file GGUF, ~42GB
 CTX="${CTX:-65536}"
 API_KEY="${API_KEY:?set API_KEY to a random string, e.g. API_KEY=\$(openssl rand -hex 16)}"
 MODELS_DIR="${MODELS_DIR:-/workspace/models}"
